@@ -1,13 +1,18 @@
-name: "factoryio-test"
+name: "factoryio-demo"
 version: 0.0.0
 type: app
 targets:
-  - "1500"
-  - llvm
+  - plcsim
 variables:
   APAX_BUILD_ARGS:
-    - "--debug" # Generate debug information for target "1500"
+    - "--debug"
 devDependencies:
-  "@ax/sdk": 2311.0.1
+  "@ax/sdk": latest
 installStrategy: strict
-apaxVersion: 3.0.0
+apaxVersion: 3.2.0-20231218-114134-c1a64da
+
+dependencies:
+  "@ax/simatic-1500-hardware-utilities": latest
+
+registries:
+  "@ax": "https://registry.dev.simatic-ax.siemens.io/"
